@@ -16,7 +16,7 @@ class LeakyApp(leakyapp_pb2_grpc.LeakyApp):
         regex = re.compile('[@_!#$%^&*()<>?/\|}{~:=]')
         if(regex.search(uname) == None):
             print ('Responding to ' + uname)
-            messages = ['Where is my coffee?', 'Is this legal?', 'Don\'t drink and root', 'Credit card number 3438 0202 1052 1426 ', 'I want to go to a mall' ]
+            messages = ['Where is my coffee?', 'Is this legal?', 'Don\'t drink and root', 'Credit card number 4012 8888 8888 1881 ', 'I want to go to a mall' ]
             msg = uname +', ' + messages[random.randint(0,4)]
             return leakyapp_pb2.HelloReply(message= msg ) 
         else:
