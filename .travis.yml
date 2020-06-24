@@ -1,0 +1,22 @@
+osx_image: xcode11.4
+language: swift
+
+install:
+  - brew install xcodegen
+  - xcodegen generate
+
+jobs:
+  include:
+  - stage: test
+    script: set -o pipefail && xcodebuild -project Dependency.xcodeproj -scheme Dependency\ Tests -destination platform\=iOS\ Simulator,OS\=11.3,name\=iPhone\ X test | xcpretty
+  
+branches:
+  only:
+    - master
+
+stages:
+- name: test
+  if: type = pull_request
+
+notifications:
+  email: false

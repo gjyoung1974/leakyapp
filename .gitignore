@@ -1,0 +1,9 @@
+.DS_Store
+*.pyc
+.build/
+Package.resolved
+.idea/
+*.swp
+*~.nib
+*.orig
+Dependency.xcodeproj/

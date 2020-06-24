@@ -1,0 +1,30 @@
+version-resolver:
+  major:
+    labels: 
+     - 'version: major'
+  minor:
+    labels:
+      - 'version: minor'
+  patch:
+    labels:
+      - 'version: patch'
+  default: patch
+categories:
+  - title: '🚀 Features'
+    label: 'type: feature 🚀'
+  - title: '🐛 Bug Fixes'
+    label: 'type: fixed 🌈'
+  - title: '🧰 Maintenance'
+    label: 'type: maintenance 🧰'
+  - title: '🔒 Security'
+    label: 'type: security 🔒'
+  - title: '💨 Removals and Deprecations'
+    labels: 
+      - 'type: deprecated 💔'
+      - 'type: removed 💨'
+replacers:
+  - search: '/FLEET-(\d+)/g'
+    replace: 'https://postmates.atlassian.net/browse/FLEET-$1'
+name-template: 'Dependency $RESOLVED_VERSION'
+tag-template: 'v$RESOLVED_VERSION'
+template: $CHANGES

@@ -1,0 +1,4 @@
+CODEOWNERS @SebastianThiebaud
+
+/Sources/ @postmates/ios
+/Tests/   @postmates/ios

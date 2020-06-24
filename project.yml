@@ -1,0 +1,29 @@
+name: Dependency
+options:
+  usesTabs: false
+  indentWidth: 4
+  tabWidth: 4
+  deploymentTarget:
+    iOS: 10.0
+configs:
+  Debug: debug 
+settings:
+  base:
+    TARGETED_DEVICE_FAMILY: 1
+    SWIFT_VERSION: "5.0"
+    CODE_SIGN_STYLE: "Manual"
+    SWIFT_OPTIMIZATION_LEVEL: -Onone
+    VERSIONING_SYSTEM: "Apple Generic"
+    CURRENT_PROJECT_VERSION: 1
+targets: 
+  Dependency_Tests:
+    name: "Dependency Tests"
+    type: bundle.unit-test
+    platform: iOS
+    settings:
+      CODE_SIGN_STYLE: "Automatic"
+      PROVISIONING_PROFILE_SPECIFIER: ""
+      CODE_SIGN_IDENTITY: "-"
+    sources: 
+      - path: Sources
+      - path: Tests
