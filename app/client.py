@@ -13,7 +13,7 @@ def run():
         uname = 'test'
         server = 'localhost'
         port = '8080'
-        detonate = sys.argv [4]
+        detonate = '--detonate' 
     except:
         detonate = "no"
         print('usage: python client.py username ip  port  [optional]--detonate ')
@@ -24,9 +24,9 @@ def run():
         if (detonate == '--detonate'):
             while True:
                 response = stub.SayHello(leakyapp_pb2.HelloRequest(name=uname))
-                print ("Nerd Says : " + response.message)
+                print ("Server Says : " + response.message)
         response = stub.SayHello(leakyapp_pb2.HelloRequest(name=uname))
-        print("Nerd Says: " + response.message)
+        print("Server says: " + response.message)
 
 
 if __name__ == '__main__':
