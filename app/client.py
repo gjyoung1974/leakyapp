@@ -4,8 +4,8 @@ import sys
 
 import grpc
 
-import hellonerd_pb2
-import hellonerd_pb2_grpc
+import leakyapp_pb2
+import leakyapp_pb2_grpc
 
 
 def run():
@@ -20,12 +20,12 @@ def run():
        
 
     with grpc.insecure_channel(server +':' + port) as channel:
-        stub = hellonerd_pb2_grpc.HelloNerdStub(channel)
+        stub = leakyapp_pb2_grpc.LeakyAppStub(channel)
         if (detonate == '--detonate'):
             while True:
-                response = stub.SayHello(hellonerd_pb2.HelloRequest(name=uname))
+                response = stub.SayHello(leakyapp_pb2.HelloRequest(name=uname))
                 print ("Nerd Says : " + response.message)
-        response = stub.SayHello(hellonerd_pb2.HelloRequest(name=uname))
+        response = stub.SayHello(leakyapp_pb2.HelloRequest(name=uname))
         print("Nerd Says: " + response.message)
 
 

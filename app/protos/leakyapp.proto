@@ -1,9 +1,9 @@
-//python -m grpc_tools.protoc -I./protos --python_out=. --grpc_python_out=. ./protos/hellonerd.proto
+//python -m grpc_tools.protoc -I./protos --python_out=. --grpc_python_out=. ./protos/leakyapp.proto
 syntax = "proto3";
 
-package hellonerd;
+package leakyapp;
 
-service HelloNerd {
+service LeakyApp {
   // Sends a quote
   rpc SayHello (HelloRequest) returns (HelloReply) {}
 }
