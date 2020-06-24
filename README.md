@@ -1,3 +1,3 @@
-## iOS Pod Template
+## Leaky App
 
-This repository can be cloned to create a new iOS pod dependency (using Cocoapods).
+A purposefully leaky app to test "front end" Security controls with gRPC
